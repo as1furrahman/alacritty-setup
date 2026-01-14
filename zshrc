@@ -352,30 +352,12 @@ if command -v yazi &> /dev/null; then
     }
 fi
 
-# ─────────────────────────────────────────────────────────────────────────────────
-# SYSTEM FETCH - Minimal system info (Ax-Shell style)
-# Arch: nitch | Debian: pfetch
-# ─────────────────────────────────────────────────────────────────────────────────
 
-# pfetch configuration (Ax-Shell minimal style)
-export PF_INFO="ascii title os kernel uptime memory"
-export PF_SEP=":"
-export PF_COLOR=1
-export PF_COL1=4  # Blue (Matches Prompt User/Host)
-export PF_COL2=7  # White (Matches Prompt Text)
-export PF_COL3=4  # Blue (Matches Title)
 
 # Ensure local bin is in PATH
 export PATH="$HOME/.local/bin:$PATH"
 
-# Show system info when opening terminal (Disabled by default, run manually)
-# if [[ $- == *i* ]]; then
-#     if command -v nitch &> /dev/null; then
-#         nitch
-#     elif command -v pfetch &> /dev/null; then
-#         pfetch
-#     fi
-# fi
+
 
 # ─────────────────────────────────────────────────────────────────────────────────
 # COLORED MAN PAGES

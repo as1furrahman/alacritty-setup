@@ -272,8 +272,7 @@ install_dependencies() {
     # Install yazi (if not already installed)
     install_yazi
 
-    # Install system fetch tool (nitch for Arch, pfetch for Debian)
-    install_fetch
+
 
     # Install zoxide (if not available via package manager)
     install_zoxide
@@ -399,62 +398,7 @@ install_yazi() {
     rm -rf "$TEMP_DIR"
 }
 
-install_fetch() {
-    # Arch: nitch (AUR) or fastfetch (official repos), Debian: pfetch (script)
-    
-    case "$DISTRO_FAMILY" in
-        arch)
-            # Check if any fetch tool is already installed
-            if command -v nitch &> /dev/null; then
-                print_success "nitch already installed"
-                return 0
-            elif command -v fastfetch &> /dev/null; then
-                print_success "fastfetch already installed"
-                return 0
-            fi
-            
-            # Try nitch via AUR helper first
-            if command -v yay &> /dev/null; then
-                print_step "Installing nitch (AUR via yay)..."
-                if yay -S --noconfirm nitch 2>/dev/null; then
-                    print_success "nitch installed via yay"
-                    return 0
-                fi
-            elif command -v paru &> /dev/null; then
-                print_step "Installing nitch (AUR via paru)..."
-                if paru -S --noconfirm nitch 2>/dev/null; then
-                    print_success "nitch installed via paru"
-                    return 0
-                fi
-            fi
-            
-            # Fallback to fastfetch from official repos
-            print_step "Installing fastfetch (official repos)..."
-            if sudo pacman -S --noconfirm --needed fastfetch; then
-                print_success "fastfetch installed (use 'fastfetch' instead of 'nitch')"
-            else
-                print_warning "Could not install fetch tool. Install manually: yay -S nitch"
-            fi
-            ;;
-        debian|fedora)
-            print_step "Checking pfetch..."
-            if command -v pfetch &> /dev/null; then
-                print_success "pfetch already installed"
-                return 0
-            fi
-            
-            print_step "Installing pfetch..."
-            # Install to local bin to avoid sudo
-            mkdir -p "$HOME/.local/bin"
-            if wget -q https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch -O "$HOME/.local/bin/pfetch"; then
-                chmod +x "$HOME/.local/bin/pfetch"
-                print_success "pfetch installed to ~/.local/bin"
-            else
-                print_warning "Failed to install pfetch"
-            fi
-            ;;
-    esac
-}
+
 
 install_zoxide() {
     print_step "Checking zoxide..."

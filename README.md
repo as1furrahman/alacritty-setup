@@ -39,7 +39,6 @@ chmod +x install.sh && ./install.sh
 | zoxide | `z <dir>` | Smart cd |
 | thefuck | `fuck` | Fix last command |
 | yazi | `y` | File manager |
-| nitch/pfetch | `nitch` | System info |
 | btop | `btop` | Resource monitor |
 | LazyVim | `nvim` | Neovim config |
 
