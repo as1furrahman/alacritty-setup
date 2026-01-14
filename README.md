@@ -9,7 +9,8 @@ Inspired by [Axenide's dotfiles](https://github.com/Axenide/Dotfiles).
 |---------|-------------|
 | **Mellifluous Theme** | Warm, muted colors for reduced eye strain |
 | **Cascadia Code** | Nerd Font with programming ligatures |
-| **Minimal Prompt** | Red `»` character, clean two-line layout |
+| **Bubble Prompt** | Starship "pill" style: `[ 0s] [ ~/path]` |
+| **Dynamic OS Logo** | Shows Arch/Debian/Ubuntu icon in prompt |
 | **Vi Mode** | Full terminal navigation from keyboard |
 | **100K Scrollback** | Large buffer for ML training logs |
 
@@ -20,7 +21,7 @@ Inspired by [Axenide's dotfiles](https://github.com/Axenide/Dotfiles).
 | **zoxide** | Smart `cd` that learns your habits (`z` command) |
 | **thefuck** | Auto-correct previous command (`fuck` or `fix`) |
 | **yazi** | Modern file manager with image preview (`y` command) |
-| **nitch** | Minimal system info (Axenide style) |
+| **nitch/pfetch** | Minimal system info (Arch: nitch, Debian: pfetch) |
 | **btop** | Beautiful resource monitor |
 | **LazyVim** | Pre-configured Neovim setup |
 
@@ -67,15 +68,14 @@ This automatically:
 | `z <dir>` | Smart cd (zoxide) |
 | `fuck` | Fix last command (thefuck) |
 | `y` | Open file manager (yazi) |
-| `nitch` | Show system info |
+| `nitch` / `pfetch` | Show system info |
 | `btop` | Resource monitor |
 
 ## 🎨 Prompt Style
 
 ```
- 5:30pm  󰅐 1 hour, 30 minutes   ubuntu in ~
-~/Documents/alacritty 
-» 
+[ 0s] [ ~/Documents]
+   ▶ _
 ```
 
 ## 📁 File Structure
