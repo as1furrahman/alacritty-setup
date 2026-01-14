@@ -1,0 +1,265 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                         ALACRITTY CONFIGURATION                              ║
+# ║   Minimal • Aesthetic • Keyboard-Centric • Python/AI/ML Development Ready   ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+#
+# Cross-distro compatible: Arch, Debian, Ubuntu
+# Color scheme: Mellifluous Dark
+# Font: Cascadia Code Nerd Font
+#
+# Integrated best practices from:
+#   - frangkli/dotfiles (structure, scrollback)
+#   - mellifluous.nvim (color palette)
+#   - Modern Alacritty v0.13+ TOML format
+
+# ─────────────────────────────────────────────────────────────────────────────────
+# GENERAL
+# ─────────────────────────────────────────────────────────────────────────────────
+
+[general]
+live_config_reload = true
+
+[env]
+TERM = "alacritty"
+
+# ─────────────────────────────────────────────────────────────────────────────────
+# WINDOW
+# ─────────────────────────────────────────────────────────────────────────────────
+
+[window]
+decorations = "none"
+dynamic_padding = true
+dynamic_title = true
+opacity = 0.92
+startup_mode = "Maximized"
+title = "Alacritty"
+
+[window.padding]
+x = 25
+y = 25
+
+[window.dimensions]
+columns = 0
+lines = 0
+
+# ─────────────────────────────────────────────────────────────────────────────────
+# FONT - Cascadia Code (CaskaydiaCove Nerd Font)
+# ─────────────────────────────────────────────────────────────────────────────────
+
+[font]
+size = 12.0
+
+[font.normal]
+family = "CaskaydiaCove Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "CaskaydiaCove Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "CaskaydiaCove Nerd Font"
+style = "Italic"
+
+[font.bold_italic]
+family = "CaskaydiaCove Nerd Font"
+style = "Bold Italic"
+
+# Line spacing - standard for seamless powerline
+[font.offset]
+x = 0
+y = 0
+
+# Glyph alignment - standard
+[font.glyph_offset]
+x = 0
+y = 0
+
+# ─────────────────────────────────────────────────────────────────────────────────
+# SCROLLING - Large buffer for ML training logs
+# ─────────────────────────────────────────────────────────────────────────────────
+
+[scrolling]
+history = 100000
+multiplier = 3
+
+# ─────────────────────────────────────────────────────────────────────────────────
+# COLORS - Mellifluous Dark Theme (Exact values from official source)
+# HSL: bg(h:24,s:10,l:11.5), fg(l:87)
+# ─────────────────────────────────────────────────────────────────────────────────
+
+[colors.primary]
+background = "#1d1a18"     # Warm dark bg (h:24,s:10,l:11.5)
+foreground = "#dedede"     # fg (l:87)
+
+[colors.cursor]
+cursor = "#cabc7f"         # orange/other_keywords
+text = "#1d1a18"
+
+[colors.vi_mode_cursor]
+cursor = "#cbaa89"
+text = "#1a1a1a"
+
+[colors.selection]
+background = "#2d2d2d"
+text = "#c0af8c"
+
+[colors.search.matches]
+background = "#3d3d3d"
+foreground = "#dadada"
+
+[colors.search.focused_match]
+background = "#cbaa89"
+foreground = "#1a1a1a"
+
+[colors.hints.start]
+background = "#cbaa89"
+foreground = "#1a1a1a"
+
+[colors.hints.end]
+background = "#2d2d2d"
+foreground = "#dadada"
+
+# Normal colors - Exact Mellifluous values from official source
+# Converted from HSL: red(19,43,68), orange(67,36,72), yellow(84,31,72)
+# blue(297,24,68), purple(331,18,68), green(108,27,72), comments(108,54,47)
+[colors.normal]
+black   = "#1d1a18"        # bg with warmth (h:24,s:10,l:11.5)
+red     = "#d4a393"        # main_keywords (h:19,s:43,l:68)
+green   = "#a8c498"        # green (h:108,s:27,l:72)
+yellow  = "#c4c07d"        # strings (h:84,s:31,l:72)
+blue    = "#c4a8c4"        # functions (h:297,s:24,l:68)
+magenta = "#c4a8b8"        # constants/purple (h:331,s:18,l:68)
+cyan    = "#cabc7f"        # other_keywords/orange (h:67,s:36,l:72)
+white   = "#dedede"        # fg (l:87)
+
+# Bright colors - Same hues, higher saturation/lightness
+[colors.bright]
+black   = "#4a4542"        # dark_bg
+red     = "#e8a898"        # brighter red
+green   = "#5ab33c"        # comments/dark_green (h:108,s:54,l:47)
+yellow  = "#d4d08a"        # brighter yellow
+blue    = "#d4b8d4"        # brighter blue
+magenta = "#d4b8c8"        # brighter magenta
+cyan    = "#dace8f"        # brighter cyan
+white   = "#ffffff"        # pure white
+
+# ─────────────────────────────────────────────────────────────────────────────────
+# CURSOR
+# ─────────────────────────────────────────────────────────────────────────────────
+
+[cursor]
+blink_interval = 500
+blink_timeout = 0
+unfocused_hollow = true
+vi_mode_style = "Block"
+
+[cursor.style]
+blinking = "On"
+shape = "Block"
+
+# ─────────────────────────────────────────────────────────────────────────────────
+# SELECTION
+# ─────────────────────────────────────────────────────────────────────────────────
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+
+# ─────────────────────────────────────────────────────────────────────────────────
+# BELL - Disabled for distraction-free coding
+# ─────────────────────────────────────────────────────────────────────────────────
+
+[bell]
+animation = "EaseOutExpo"
+color = "#cbaa89"
+duration = 0
+
+# ─────────────────────────────────────────────────────────────────────────────────
+# MOUSE
+# ─────────────────────────────────────────────────────────────────────────────────
+
+[mouse]
+hide_when_typing = true
+
+# ─────────────────────────────────────────────────────────────────────────────────
+# HINTS - Clickable URLs with Ctrl+Click
+# ─────────────────────────────────────────────────────────────────────────────────
+
+[[hints.enabled]]
+command = "xdg-open"
+hyperlinks = true
+post_processing = true
+persist = false
+mouse.enabled = true
+mouse.mods = "Control"
+binding.key = "U"
+binding.mods = "Control|Shift"
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
+
+# ─────────────────────────────────────────────────────────────────────────────────
+# KEYBOARD BINDINGS
+# Keyboard-centric workflow optimized for productivity
+# ─────────────────────────────────────────────────────────────────────────────────
+
+[keyboard]
+bindings = [
+    # ── Copy/Paste ──
+    { key = "C",        mods = "Control|Shift", action = "Copy" },
+    { key = "V",        mods = "Control|Shift", action = "Paste" },
+    { key = "Insert",   mods = "Shift",         action = "PasteSelection" },
+
+    # ── Font Size ──
+    { key = "Plus",     mods = "Control|Shift", action = "IncreaseFontSize" },
+    { key = "Minus",    mods = "Control",       action = "DecreaseFontSize" },
+    { key = "Key0",     mods = "Control",       action = "ResetFontSize" },
+
+    # ── Search ──
+    { key = "F",        mods = "Control|Shift", action = "SearchForward" },
+    { key = "B",        mods = "Control|Shift", action = "SearchBackward" },
+
+    # ── Vi Mode ──
+    { key = "Space",    mods = "Control|Shift", action = "ToggleViMode" },
+
+    # ── Window Control ──
+    { key = "N",        mods = "Control|Shift", action = "SpawnNewInstance" },
+    { key = "Q",        mods = "Control|Shift", action = "Quit" },
+    { key = "F11",      mods = "None",          action = "ToggleFullscreen" },
+
+    # ── Scrolling ──
+    { key = "PageUp",   mods = "Shift",         action = "ScrollPageUp" },
+    { key = "PageDown", mods = "Shift",         action = "ScrollPageDown" },
+    { key = "Home",     mods = "Shift",         action = "ScrollToTop" },
+    { key = "End",      mods = "Shift",         action = "ScrollToBottom" },
+
+    # ── Clear ──
+    { key = "L",        mods = "Control",       action = "ClearLogNotice" },
+    { key = "K",        mods = "Control|Shift", action = "ClearHistory" },
+
+    # ── Vi Mode Bindings ──
+    { key = "Up",       mods = "None",          action = "Up",                mode = "Vi" },
+    { key = "Down",     mods = "None",          action = "Down",              mode = "Vi" },
+    { key = "Left",     mods = "None",          action = "Left",              mode = "Vi" },
+    { key = "Right",    mods = "None",          action = "Right",             mode = "Vi" },
+    { key = "K",        mods = "None",          action = "Up",                mode = "Vi" },
+    { key = "J",        mods = "None",          action = "Down",              mode = "Vi" },
+    { key = "H",        mods = "None",          action = "Left",              mode = "Vi" },
+    { key = "L",        mods = "None",          action = "Right",             mode = "Vi" },
+    { key = "W",        mods = "None",          action = "SemanticRight",     mode = "Vi" },
+    { key = "B",        mods = "None",          action = "SemanticLeft",      mode = "Vi" },
+    { key = "E",        mods = "None",          action = "SemanticRightEnd",  mode = "Vi" },
+    { key = "Key0",     mods = "None",          action = "First",             mode = "Vi" },
+    { key = "Key4",     mods = "Shift",         action = "Last",              mode = "Vi" },
+    { key = "G",        mods = "None",          action = "ScrollToBottom",    mode = "Vi" },
+    { key = "G",        mods = "Shift",         action = "ScrollToTop",       mode = "Vi" },
+    { key = "V",        mods = "None",          action = "ToggleNormalSelection", mode = "Vi" },
+    { key = "V",        mods = "Shift",         action = "ToggleLineSelection",   mode = "Vi" },
+    { key = "V",        mods = "Control",       action = "ToggleBlockSelection",  mode = "Vi" },
+    { key = "Y",        mods = "None",          action = "Copy",              mode = "Vi" },
+    { key = "Slash",    mods = "None",          action = "SearchForward",     mode = "Vi" },
+    { key = "Slash",    mods = "Shift",         action = "SearchBackward",    mode = "Vi" },
+    { key = "N",        mods = "None",          action = "SearchNext",        mode = "Vi" },
+    { key = "N",        mods = "Shift",         action = "SearchPrevious",    mode = "Vi" },
+    { key = "Escape",   mods = "None",          action = "ToggleViMode",      mode = "Vi" },
+    { key = "Return",   mods = "None",          action = "Open",              mode = "Vi" },
+]
