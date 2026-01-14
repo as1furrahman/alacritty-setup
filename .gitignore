@@ -1,0 +1,12 @@
+# Backups
+*.bak
+*.backup.*
+*.swp
+*~
+
+# System
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
