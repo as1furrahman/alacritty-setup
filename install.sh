@@ -174,7 +174,8 @@ install_dependencies() {
     # Define packages to check
     case "$DISTRO_FAMILY" in
         arch)
-            PKGS_TO_CHECK="alacritty zsh nano fzf git curl unzip wget neovim ripgrep fd bat eza btop zoxide yazi nitch thefuck"
+            # Note: nitch is AUR-only, handled separately in install_fetch()
+            PKGS_TO_CHECK="alacritty zsh nano fzf git curl unzip wget neovim ripgrep fd bat eza btop zoxide thefuck"
             ;;
         debian)
             PKGS_TO_CHECK="alacritty zsh nano fzf git curl unzip wget neovim ripgrep bat btop"
