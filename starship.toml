@@ -31,10 +31,10 @@ right_format = ""
 # ─────────────────────────────────────────────────────────────────────────────────
 
 [character]
-# end-4 style: [  ▶ ] (Medium Dot)
-success_symbol = "[  ▶](bold blue)"
-error_symbol = "[  ▶](bold red)"
-vimcmd_symbol = "[  ❮](bold white)"
+# end-4 style: [ ● ▶ ] (Medium Circle)
+success_symbol = "[ ● ▶](bold blue)"
+error_symbol = "[ ● ▶](bold red)"
+vimcmd_symbol = "[ ● ❮](bold white)"
 format = "  $symbol "
 
 [line_break]
@@ -49,62 +49,62 @@ disabled = false
 [cmd_duration]
 min_time = 0
 style = "bg:white fg:black"
-format = '[](fg:white)[$duration]($style)[](fg:white)'
+format = '[](fg:white)[ $duration]($style)[](fg:white)'
 
 [username]
 show_always = false
 disabled = true
 style_user = "bg:blue fg:black"
 style_root = "bg:red fg:black"
-format = '[](fg:blue)[$user]($style)[](fg:blue)'
+format = '[](fg:blue)[$user]($style)[ ](fg:blue)'
 
 [hostname]
 ssh_only = false
 style = "bg:blue fg:black"
-format =  '[](fg:blue)[$hostname]($style)[](fg:blue)'
+format =  '[](fg:blue)[$hostname]($style)[ ](fg:blue)'
 disabled = true
 
 [os]
 disabled = false
 style = "bg:green fg:black"
-format = '[](fg:green)[$symbol]($style)'
+format = '[](fg:green)[$symbol ]($style)'
 
 [os.symbols]
-Arch = "󰣇"
-Debian = "󰣚"
-Ubuntu = ""
-Macos = ""
-Windows = "󰍲"
-Linux = "󰌽"
-Fedora = "󰣛"
-Mint = "󰣭"
-Pop = ""
-Manjaro = "󱘊"
-Android = "󰀲"
-Raspbian = ""
+Arch = ""
+Debian = ""
+Ubuntu = ""
+Macos = ""
+Windows = ""
+Linux = ""
+Fedora = ""
+Mint = ""
+Pop = ""
+Manjaro = ""
+Android = ""
+Raspbian = ""
 
 [directory]
 style = "bg:green fg:black"
-read_only = " "
+read_only = "  "
 truncation_length = 4
 truncation_symbol = "…/"
-format = '[$path]($style)[](fg:green)'
+format = '[$path]($style)[ ](fg:green)'
 
 [directory.substitutions]
-"Documents" = " "
-"Downloads" = " "
-"Music" = "󰎈 "
-"Pictures" = " "
-"Videos" = " "
+"Documents" = "  "
+"Downloads" = "  "
+"Music" = " 󰎈 "
+"Pictures" = "  "
+"Videos" = "  "
 
 [git_branch]
-symbol = ""
+symbol = ""
 style = "bg:cyan fg:black"
-format = '[](fg:cyan)[$symbol$branch]($style)'
+format = '[](fg:cyan)[$symbol $branch]($style)'
 
 [git_status]
 style = "bg:cyan fg:black"
-format = '[$all_status$ahead_behind]($style)[](fg:cyan)'
+format = '[$all_status$ahead_behind]($style)[ ](fg:cyan)'
 conflicted = "🏳"
 ahead = "🏎💨"
 behind = "😰"

@@ -1,95 +1,67 @@
 # 🖥️ Alacritty Terminal Setup
 
-A minimal, aesthetic, keyboard-centric terminal configuration optimized for Python/AI/ML development.
-Inspired by [Axenide's dotfiles](https://github.com/Axenide/Dotfiles).
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Shell: Zsh](https://img.shields.io/badge/Shell-Zsh-green.svg)](https://www.zsh.org/)
+[![Prompt: Starship](https://img.shields.io/badge/Prompt-Starship-purple.svg)](https://starship.rs/)
+
+A minimal, aesthetic terminal configuration for Arch, Debian, Ubuntu & Fedora.
+
+![Prompt Preview](https://img.shields.io/badge/Style-Bubble%20Prompt-success)
 
 ## ✨ Features
 
 | Feature | Description |
 |---------|-------------|
 | **Mellifluous Theme** | Warm, muted colors for reduced eye strain |
-| **Cascadia Code** | Nerd Font with programming ligatures |
-| **Bubble Prompt** | Starship "pill" style: `[ 0s] [ ~/path]` |
-| **Dynamic OS Logo** | Shows Arch/Debian/Ubuntu icon in prompt |
-| **Vi Mode** | Full terminal navigation from keyboard |
-| **100K Scrollback** | Large buffer for ML training logs |
-
-### Included Tools
-
-| Tool | Description |
-|------|-------------|
-| **zoxide** | Smart `cd` that learns your habits (`z` command) |
-| **thefuck** | Auto-correct previous command (`fuck` or `fix`) |
-| **yazi** | Modern file manager with image preview (`y` command) |
-| **nitch/pfetch** | Minimal system info (Arch: nitch, Debian: pfetch) |
-| **btop** | Beautiful resource monitor |
-| **LazyVim** | Pre-configured Neovim setup |
+| **Cascadia Code** | Nerd Font with ligatures |
+| **Bubble Prompt** | Pill-style modules: `[ 0s] [ ~/path]` |
+| **Dynamic OS Logo** | Arch/Debian/Ubuntu icon in prompt |
+| **Vi Mode** | Terminal navigation via keyboard |
 
 ## 🚀 Quick Install
 
 ```bash
-git clone <repo-url> ~/Documents/alacritty
+git clone https://github.com/<username>/alacritty-setup ~/Documents/alacritty
 cd ~/Documents/alacritty
-./install.sh
+chmod +x install.sh && ./install.sh
 ```
 
-This automatically:
-- ✅ Detects distro (Arch, Debian, Ubuntu, Fedora)
-- ✅ Installs all dependencies
-- ✅ Installs Starship, Nerd Font, LazyVim
-- ✅ Configures all tools
-- ✅ Changes shell to zsh
+**What it does:**
+- Detects your distro
+- Installs dependencies (Starship, Nerd Font, zsh plugins)
+- Configures Alacritty, Starship & Zsh
+- Sets zsh as default shell
 
-### Options
+## 📦 Included Tools
 
-```bash
-./install.sh              # Full install
-./install.sh --deps-only  # Only dependencies
-./install.sh --no-deps    # Only configs
-```
+| Tool | Command | Description |
+|------|---------|-------------|
+| zoxide | `z <dir>` | Smart cd |
+| thefuck | `fuck` | Fix last command |
+| yazi | `y` | File manager |
+| nitch/pfetch | `nitch` | System info |
+| btop | `btop` | Resource monitor |
+| LazyVim | `nvim` | Neovim config |
 
-## ⌨️ Keyboard Shortcuts
+## ⌨️ Shortcuts
 
-### Alacritty
-
-| Shortcut | Action |
-|----------|--------|
-| `Ctrl+Shift+Space` | Toggle Vi mode |
-| `Ctrl+Shift+Q` | Quit |
+| Key | Action |
+|-----|--------|
+| `Ctrl+Shift+Space` | Vi mode |
 | `Ctrl+Shift+F` | Search |
 | `Ctrl+Shift+C/V` | Copy/Paste |
-| `Ctrl++/-/0` | Font size |
 | `F11` | Fullscreen |
 
-### Shell Commands
-
-| Command | Action |
-|---------|--------|
-| `z <dir>` | Smart cd (zoxide) |
-| `fuck` | Fix last command (thefuck) |
-| `y` | Open file manager (yazi) |
-| `nitch` / `pfetch` | Show system info |
-| `btop` | Resource monitor |
-
-## 🎨 Prompt Style
+## 📁 Structure
 
 ```
-[ 0s] [ ~/Documents]
-   ▶ _
-```
-
-## 📁 File Structure
-
-```
-~/Documents/alacritty/
-├── alacritty.toml     # Terminal config
-├── starship.toml      # Minimal prompt
-├── zshrc              # Zsh config
-├── yazi.toml          # File manager config
-├── install.sh         # Auto-installer
-└── README.md
+├── alacritty.toml   # Terminal config
+├── starship.toml    # Prompt config
+├── zshrc            # Shell config
+├── yazi.toml        # File manager
+└── install.sh       # Auto-installer
 ```
 
 ## 📝 License
 
-MIT
+[MIT](LICENSE)
