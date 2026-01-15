@@ -72,33 +72,33 @@ format = '[](fg:green)[$symbol]($style)[](fg:green)'
 [os.symbols]
 # Family icons - derivatives use parent icon
 # Arch family
-Arch = " "
-Manjaro = " "
-EndeavourOS = " "
-Artix = " "
-Garuda = " "
-CachyOS = " "
+Arch = ""
+Manjaro = ""
+EndeavourOS = ""
+Artix = ""
+Garuda = ""
+CachyOS = ""
 
 # Debian family
-Debian = " "
-Ubuntu = " "
-Mint = " "
-Pop = " "
-Raspbian = " "
-Kali = " "
-Elementary = " "
-Zorin = " "
+Debian = ""
+Ubuntu = ""
+Mint = ""
+Pop = ""
+Raspbian = ""
+Kali = ""
+Elementary = ""
+Zorin = ""
 
 # Fedora/RedHat family
-Fedora = " "
-CentOS = " "
-Redhat = " "
-RedHatEnterprise = " "
-AlmaLinux = " "
-RockyLinux = " "
+Fedora = ""
+CentOS = ""
+Redhat = ""
+RedHatEnterprise = ""
+AlmaLinux = ""
+RockyLinux = ""
 
 # Generic fallback
-Linux = " "
+Linux = ""
 
 [directory]
 style = "fg:green"
@@ -110,7 +110,7 @@ format = ' [$path]($style)'
 [directory.substitutions]
 "Documents" = " "
 "Downloads" = " "
-"Music" = "󰎈 "
+"Music" = "󰎈"
 "Pictures" = " "
 "Videos" = " "
 
@@ -122,12 +122,12 @@ format = '[](fg:cyan)[$symbol $branch]($style)'
 [git_status]
 style = "bg:cyan fg:black"
 format = '[$all_status$ahead_behind]($style)[ ](fg:cyan)'
-conflicted = "󰞇 "  # nf-md-sword_cross
+conflicted = "󰞇"  # nf-md-sword_cross
 ahead = "↑"          # simple arrow
 behind = "↓"         # simple arrow
-diverged = "󰃻 "     # nf-md-swap_vertical
+diverged = "󰃻"     # nf-md-swap_vertical
 untracked = "?"      # simple question mark
-stashed = "󰆓 "      # nf-md-package
+stashed = "󰆓"      # nf-md-package
 modified = "~"       # simple tilde
 staged = "+"         # simple plus
 renamed = "→"        # simple arrow
