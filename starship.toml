@@ -70,12 +70,28 @@ style = "bg:green fg:black"
 format = '[](fg:green)[$symbol ]($style)'
 
 [os.symbols]
-# Minimal family icons (Nerd Font)
-Arch = " "       # nf-linux-archlinux
-Debian = " "     # nf-linux-debian
-Ubuntu = " "     # nf-linux-ubuntu  
-Fedora = " "     # nf-linux-fedora
-Linux = " "      # nf-linux-tux (generic)
+# Family icons - derivatives use parent icon
+# Arch family
+Arch = " "
+Manjaro = " "
+EndeavourOS = " "
+Artix = " "
+
+# Debian family
+Debian = " "
+Ubuntu = " "
+Mint = " "
+Pop = " "
+Raspbian = " "
+Kali = " "
+
+# Fedora family
+Fedora = " "
+CentOS = " "
+RHEL = " "
+
+# Generic fallback
+Linux = " "
 
 [directory]
 style = "bg:green fg:black"
