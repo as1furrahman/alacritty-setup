@@ -70,13 +70,11 @@ style = "bg:green fg:black"
 format = '[](fg:green)[$symbol ]($style)'
 
 [os.symbols]
-# Family icons only - derivatives inherit from parent
-Arch = ""        # Arch, Manjaro, EndeavourOS
-Debian = ""      # Debian, Ubuntu, Mint, Pop, Raspbian
-Fedora = ""      # Fedora, CentOS, RHEL
-Gentoo = ""      # Gentoo
-Linux = ""       # Generic Linux fallback
-
+# Minimal family icons (Nerd Font)
+Arch = " "       # nf-linux-archlinux
+Debian = " "     # nf-linux-debian
+Fedora = " "     # nf-linux-fedora
+Linux = " "      # nf-linux-tux (generic)
 [directory]
 style = "bg:green fg:black"
 read_only = "  "
