@@ -71,10 +71,12 @@ format = '[](fg:green)[$symbol ]($style)'
 
 [os.symbols]
 # Minimal family icons (Nerd Font)
-Arch = " "       # nf-linux-archlinux
-Debian = " "     # nf-linux-debian
-Fedora = " "     # nf-linux-fedora
-Linux = " "      # nf-linux-tux (generic)
+Arch = " "       # nf-linux-archlinux
+Debian = " "     # nf-linux-debian
+Ubuntu = " "     # nf-linux-ubuntu  
+Fedora = " "     # nf-linux-fedora
+Linux = " "      # nf-linux-tux (generic)
+
 [directory]
 style = "bg:green fg:black"
 read_only = "  "
