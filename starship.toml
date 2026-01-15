@@ -76,6 +76,8 @@ Arch = " "
 Manjaro = " "
 EndeavourOS = " "
 Artix = " "
+Garuda = " "
+CachyOS = " "
 
 # Debian family
 Debian = " "
@@ -84,11 +86,16 @@ Mint = " "
 Pop = " "
 Raspbian = " "
 Kali = " "
+Elementary = " "
+Zorin = " "
 
-# Fedora family
+# Fedora/RedHat family
 Fedora = " "
 CentOS = " "
-RHEL = " "
+Redhat = " "
+RedHatEnterprise = " "
+AlmaLinux = " "
+RockyLinux = " "
 
 # Generic fallback
 Linux = " "
