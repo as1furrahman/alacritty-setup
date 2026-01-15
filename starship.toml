@@ -102,17 +102,17 @@ Linux = " "
 
 [directory]
 style = "bg:green fg:black"
-read_only = "  "
+read_only = " "
 truncation_length = 4
 truncation_symbol = "…/"
-format = '[$path]($style)[ ](fg:green)'
+format = '[](fg:green)[  $path ]($style)[](fg:green)'
 
 [directory.substitutions]
-"Documents" = "  "
-"Downloads" = "  "
-"Music" = " 󰎈 "
-"Pictures" = "  "
-"Videos" = "  "
+"Documents" = ""
+"Downloads" = ""
+"Music" = ""
+"Pictures" = ""
+"Videos" = ""
 
 [git_branch]
 symbol = ""
