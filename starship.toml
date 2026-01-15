@@ -70,18 +70,12 @@ style = "bg:green fg:black"
 format = '[](fg:green)[$symbol ]($style)'
 
 [os.symbols]
-Arch = ""
-Debian = ""
-Ubuntu = ""
-Macos = ""
-Windows = ""
-Linux = ""
-Fedora = ""
-Mint = ""
-Pop = ""
-Manjaro = ""
-Android = ""
-Raspbian = ""
+# Family icons only - derivatives inherit from parent
+Arch = ""        # Arch, Manjaro, EndeavourOS
+Debian = ""      # Debian, Ubuntu, Mint, Pop, Raspbian
+Fedora = ""      # Fedora, CentOS, RHEL
+Gentoo = ""      # Gentoo
+Linux = ""       # Generic Linux fallback
 
 [directory]
 style = "bg:green fg:black"
@@ -105,16 +99,16 @@ format = '[](fg:cyan)[$symbol $branch]($style)'
 [git_status]
 style = "bg:cyan fg:black"
 format = '[$all_status$ahead_behind]($style)[ ](fg:cyan)'
-conflicted = "🏳"
-ahead = "🏎💨"
-behind = "😰"
-diverged = "😵"
-untracked = "🤷"
-stashed = "📦"
-modified = "📝"
-staged = '[++\($count\)](green)'
-renamed = "✍️"
-deleted = "🗑"
+conflicted = "󰞇 "  # nf-md-sword_cross
+ahead = "↑"          # simple arrow
+behind = "↓"         # simple arrow
+diverged = "󰃻 "     # nf-md-swap_vertical
+untracked = "?"      # simple question mark
+stashed = "󰆓 "      # nf-md-package
+modified = "~"       # simple tilde
+staged = "+"         # simple plus
+renamed = "→"        # simple arrow
+deleted = "✗"        # simple x
 
 [git_state]
 format = '[\($state( $progress_current/$progress_total)\)]($style) '
