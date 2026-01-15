@@ -67,7 +67,7 @@ disabled = true
 [os]
 disabled = false
 style = "bg:green fg:black"
-format = '[](fg:green)[$symbol ]($style)'
+format = '[](fg:green)[$symbol]($style)[](fg:green)'
 
 [os.symbols]
 # Family icons - derivatives use parent icon
